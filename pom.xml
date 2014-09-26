@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>1.480</version>
+    <relativePath />
+  </parent>
+
+  <artifactId>extension-samples</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>hpi</packaging>
+  <name>Extension samples</name>
+  <description>Example implementation of various extension point for demonstration purposes</description>
+
+  <!--
+    Tip: Declare dependency on another plugin to access its classes. Jenkins
+    plugin manager will make sure dependent plugin will be installed with
+    current one.
+  -->
+  <dependencies>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>jquery</artifactId>
+      <version>1.7.2-1</version>
+    </dependency>
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>http://repo.jenkins-ci.org/public/</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org</id>
+      <url>http://repo.jenkins-ci.org/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
+</project>  
