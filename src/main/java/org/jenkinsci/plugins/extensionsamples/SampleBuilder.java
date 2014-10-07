@@ -63,9 +63,17 @@ public class SampleBuilder extends Builder {
     public boolean perform(
             AbstractBuild<?, ?> build, Launcher launcher, BuildListener listener
     ) throws InterruptedException, IOException {
-        launcher.launch().cmds("echo", "Sample command run from build step").stdout(listener).start().join();
+
+        // Print string to build console output.
         listener.error("Sample error recorded");
+
+        // Launch remote command on slave, redirect stdout to console output and wait for completion.
+        launcher.launch().cmds("echo", "Sample command run from build step").stdout(listener).start().join();
+
+        // Write string content to job workspace on slave.
         build.getWorkspace().child("sample.log").write("Sample contnet", "UTF-8");
+
+        // Fail the build conditionally
         return !failTheBuild;
     }
 
