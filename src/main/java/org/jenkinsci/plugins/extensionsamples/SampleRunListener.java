@@ -24,10 +24,9 @@
 package org.jenkinsci.plugins.extensionsamples;
 
 import hudson.Extension;
-import hudson.model.TaskListener;
 import hudson.model.Run;
+import hudson.model.TaskListener;
 import hudson.model.listeners.RunListener;
-
 import java.util.logging.Logger;
 
 @Extension
@@ -42,6 +41,6 @@ public class SampleRunListener extends RunListener<Run<?, ?>> {
 
     @Override
     public void onCompleted(Run<?, ?> r, TaskListener listener) {
-        LOGGER.info("onStarted " + r.getFullDisplayName());
+        LOGGER.info("onCompleted " + r.getFullDisplayName());
     }
 }
