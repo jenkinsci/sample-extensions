@@ -31,7 +31,7 @@ import org.kohsuke.args4j.Option;
 /**
  * Expose bright new CLI command.
  *
- * No the command is listed on $JEKINS_URL/cli and in output of `java -jar jenkins-cli.jar -s $JENKINS_URL help`.
+ * No the command is listed on $JENKINS_URL/cli and in output of `java -jar jenkins-cli.jar -s $JENKINS_URL help`.
  */
 @Extension
 public class SampleCliCommand extends CLICommand {
